@@ -2,7 +2,7 @@
 // OnTime plugin, https://github.cmo/bsnosi/yellow-plugin-ontime
 // based on http://github.com/schulle4u/yellow-plugin-global (version 0.7.5)
 // Copyright (c) 2013-2017 Datenstrom, http://datenstrom.se
-// This file may be used and distributed under the terms of the MIT license.
+// This file may be used and distributed under the terms of the public license.
 
 class YellowOnTime
 {
