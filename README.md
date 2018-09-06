@@ -72,4 +72,4 @@ Shows *teaser* ending at 2018-08-30.
 
 ## Developer
 
-[Norbert Simon](https://nosi.de)
+[Norbert Simon](https://nosi.de) based on [schulle4u yellow-global-plugin](http://github.com/schulle4u/yellow-plugin-global) 
