@@ -1,12 +1,12 @@
 <?php
 // OnTime plugin, https://github.cmo/bsnosi/yellow-plugin-ontime
 // based on http://github.com/schulle4u/yellow-plugin-global (version 0.7.5)
-// Copyright (c) 2013-2017 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2018 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 class YellowOnTime
 {
-	const VERSION = "1.0";
+	const VERSION = "1.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -37,9 +37,7 @@ class YellowOnTime
 			if (empty($End)) { $End = date("Y-m-d"); }
 			if (empty($Start)) { $Start = date("Y-m-d"); }
 			
-			$End = strtotime($End . " 23:59:59");
-			$Start = strtotime($Start . " 00:00:01");
-			$currdate = strtotime(date("Y-m-d H:i:s"));
+			$currdate = strtotime(date("Y-m-d"));
 			
 			if (($currdate >= $Start) AND ($currdate <= $End)) {
 				if(strempty($mode)) $mode = "0";
