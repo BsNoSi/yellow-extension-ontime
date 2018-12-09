@@ -1,6 +1,6 @@
 # Yellow Plugin OnTime 
 
-### V 1.0
+### V 1.1
 
 OnTime shows external file content for a dedicated time period.
 
@@ -18,7 +18,7 @@ Inspired by (and based on) the [Global](https://github.com/schulle4u/yellow-plug
  
 To uninstall simply delete the [plugin files](update.ini).
 
-## How do I use cmail plugin?
+## How do I use the ontime plugin?
 
 There are several methods to use `ontime`:
 
@@ -44,6 +44,8 @@ Optionally the `displaymode` can be used to switch between content and teaser di
 **end_of_display** (optional) including this date the external file is shown
 
 **start_of_display** (optional) without end date the display starts on the specific date with no end
+
+> Without start or end date the given file is always shown. 
 
 **displaymode** (optional) if `1` the external file is shown as teaser (up to `[--more--]` including title)
 
