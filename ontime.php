@@ -1,13 +1,13 @@
 <?php
 // OnTime plugin, https://github.cmo/bsnosi/yellow-plugin-ontime
-// based on http://github.com/schulle4u/yellow-plugin-global (version 0.7.5)
+// idea based on http://github.com/schulle4u/yellow-plugin-global (version 0.7.5)
 // Copyright (c) 2013-2018 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 class YellowOnTime
 {
-	const VERSION = "1.1";
-	var $yellow;			//access to API
+	const VERSION = '1.1.5';
+	var $yellow; //access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
@@ -30,21 +30,21 @@ class YellowOnTime
 			
 			$page = $this->yellow->pages->find($location);
 			if(!$page) {
-				$output .= "<h1><a href=\"/edit" . $location . "\">Create missing file!</a></h1>";
+				$output .= '<h1><a href="/edit' . $location . '">Create missing file!</a></h1>';
 				goto TheEnd;
 			}	
 			
 			if (empty($End)) { $End = date("Y-m-d"); }
 			if (empty($Start)) { $Start = date("Y-m-d"); }
-			
-			$currdate = strtotime(date("Y-m-d"));
+					
+			$currdate = date("Y-m-d");
 			
 			if (($currdate >= $Start) AND ($currdate <= $End)) {
 				if(strempty($mode)) $mode = "0";
-				$output .= "<div class=\"".$name."\">\n";
-					if($mode == "1") {
-						$output .= "<h2><a href=\"".$page->getLocation(true)."\">".$page->getHtml("title")."</a></h2>\n";
-						$output .= $this->yellow->toolbox->createTextDescription($page->getContent(), 0, false, "<!--more-->", " <a href=\"".$page->getLocation(true)."\">".$this->yellow->text->getHtml("blogMore")."</a>");
+				$output .= '<div class="'.$name.'">' . "\n";
+					if($mode == '1') {
+						$output .= '<h2><a href="'.$page->getLocation(true).'">'.$page->getHtml('title')."</a></h2>\n";
+						$output .= $this->yellow->toolbox->createTextDescription($page->getContent(), 0, false, '<!--more-->', ' <a href="'.$page->getLocation(true).'">'.$this->yellow->text->getHtml('blogMore').'</a>');
 					} else {
 						$output .= $page->getContent();
 					}
@@ -58,6 +58,4 @@ class YellowOnTime
 		return $output;
 	}
 }
-
-$yellow->plugins->register("ontime", "YellowOnTime", YellowOnTime::VERSION);
 ?>
