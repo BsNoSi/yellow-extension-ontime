@@ -1,6 +1,6 @@
-# Yellow Plugin OnTime 
+# Yellow Extension OnTime 
 
-### V 1.1
+### V 1.2.0  (requires YELLOW 0.8.4 or higher)
 
 OnTime shows external file content for a dedicated time period.
 
@@ -13,16 +13,16 @@ Inspired by (and based on) the [Global](https://github.com/schulle4u/yellow-plug
 ## How do I Install This?
 
 1. Download and install [Datenstrom Yellow CMS](https://github.com/datenstrom/yellow/).
-2. Download [OnTime plugin](https://github.com/BsNoSi/yellow-plugin-ontime/archive/master.zip ).  If you are using Safari, right click and select 'Download file as'.
+2. Download [OnTime extension](https://github.com/BsNoSi/yellow-extension-ontime/archive/master.zip ).  If you are using Safari, right click and select 'Download file as'.
 3. Copy the `yellow-plugin-ontime-master.zip` into the `system/plugins` folder.
  
-To uninstall simply delete the [plugin files](update.ini).
+To uninstall simply delete the [extension files](update.ini).
 
 ## How do I use the ontime plugin?
 
 There are several methods to use `ontime`:
 
-- Display external content (similar to [Global](https://github.com/schulle4u/yellow-plugin-global)):     
+- Display external content
  `[ontime file-url]`
  - Display external content up to and including an end date:   
   `[ontime file-url end_of_display]`
@@ -48,6 +48,8 @@ Optionally the `displaymode` can be used to switch between content and teaser di
 > Without start or end date the given file is always shown. 
 
 **displaymode** (optional) if `1` the external file is shown as teaser (up to `[--more--]` including title)
+
+> [ontime] without any parameter shows a bold parameter list in preview. If not bold you should check if imgpop is correctly installed.
 
 #### Hints
 
