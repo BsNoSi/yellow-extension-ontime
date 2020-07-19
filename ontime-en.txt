@@ -1,3 +1,0 @@
-Required changes for YELLOW 0.8.4 and higher
-
-(requires YELLOW 0.8.4 or higher)
