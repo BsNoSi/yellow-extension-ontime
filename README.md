@@ -1,6 +1,6 @@
 # Yellow Extension OnTime 
 
-### V 1.2.0  (requires YELLOW 0.8.4 or higher)
+### V 1.2.1  (requires YELLOW 0.8.13 or higher)
 
 OnTime shows external file content for a dedicated time period.
 
@@ -74,6 +74,10 @@ Shows *teaser* starting at 2018-08-30.
 
 Shows *teaser* ending at 2018-08-30.
 
+## History
+
+2020-07-19: Alignments to new API (0.8.13 ar higher), simplfication fo langauge file (combined into one, French added)
+
 ## Developer
 
-[Norbert Simon](https://nosi.de) based on [schulle4u yellow-global-plugin](http://github.com/schulle4u/yellow-plugin-global) 
+[Norbert Simon](https://nosi.de) 
