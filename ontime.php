@@ -4,11 +4,11 @@
 // YELLOW Copyright ©2013-now Datenstrom, http://datenstrom.se
 // idea based on http://github.com/schulle4u/yellow-plugin-global (version 0.7.5)
 // This file may be used and distributed under the terms of the public license.
-// requires YELLOW 0.8.4 or higher
+// requires YELLOW 0.8.13 or higher
 
 class YellowOnTime
 {
-	const VERSION = '1.2.0';
+	const VERSION = '1.2.1';
 	const TYPE = "feature";
     public $yellow;         //access to API
 	
@@ -23,7 +23,7 @@ class YellowOnTime
         $output = null;
 		if($name=="ontime"  && ($type=="block" || $type=="inline"))
 		{
-			list($location, $End, $Start, $mode) = $this->yellow->toolbox->getTextArgs($text);
+			list($location, $End, $Start, $mode) = $this->yellow->toolbox->getTextArguments($text);
 			
 			if(empty($text)) {
 					$output = '<b>[ontime (/ontime/)file-url end-of-display start_of_display display_mode(1=more)]</b>';
