@@ -1,0 +1,20 @@
+# Datenstrom Yellow language file
+
+Language: en
+LanguageDescription: English
+LanguageTranslator: Norbert Simon
+
+ontime_NoLocation: File missing - create it? (Check parameters → STATUS: unlisted)
+
+
+Language: de
+LanguageDescription: Deutsch
+LanguageTranslator: Norbert Simon
+
+ontime_NoLocation: Datei fehlt - Erzeugen? (Parameter prüfen → STATUS: unlisted)
+
+Language: fr
+LanguageDescription: French
+LanguageTranslator: Norbert Simon
+
+ontime_NoLocation: Fichier manquant - le créer ? (Vérifier les paramètres → STATUS: unlisted)
