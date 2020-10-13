@@ -1,0 +1,7 @@
+# Datenstrom Yellow language file
+
+Language: de
+LanguageDescription: Deutsch
+LanguageTranslator: Norbert Simon
+
+ontime_NoLocation: Datei fehlt - erzeugen? (Parameter prüfen!)
