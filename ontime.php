@@ -4,10 +4,9 @@
 // YELLOW Copyright ©2013-now Datenstrom, http://datenstrom.se
 // idea based on http://github.com/schulle4u/yellow-plugin-global (version 0.7.5)
 // This file may be used and distributed under the terms of the public license.
-// requires YELLOW 0.8.13 or higher
 
 class YellowOnTime {
-  const VERSION = '1.2.2';
+  const VERSION = '1.2.3';
 	
   public $yellow;
 	
@@ -26,7 +25,7 @@ class YellowOnTime {
 	  $location = "/ontime/" . $location;
 	  $page = $this->yellow->content->find($location);
 	  if(!$page) {
-	    $output .= "<h3><u><a href=\"/edit" . $location . "\">".$this->yellow->text->get("ontime_NoLocation") ."</a></u></h3>";
+	    $output .= "<h3><u><a href=\"/edit" . $location . "\">".$this->yellow->language->getText("ontime_NoLocation") ."</a></u></h3>";
 	  }
 	  else {
 	    $End = $End?:date("Y-m-d");
@@ -37,7 +36,7 @@ class YellowOnTime {
 		$output .= "<div class=\"".$name."\">" . "\n";
 		if($mode == '1') {
 		  $output .= "<h2><a href=\"".$page->getLocation(true)."\">".$page->getHtml("title")."</a></h2>\n";
-		  $output .= $this->yellow->toolbox->createTextDescription($page->getContent(), 0, false, "<!--more-->", " <a href=\"".$page->getLocation(true)."\">".$this->yellow->text->getHtml("blogMore")."</a>");
+		  $output .= $this->yellow->toolbox->createTextDescription($page->getContent(), 0, false, "<!--more-->", " <a href=\"".$page->getLocation(true)."\">".$this->yellow->language->getTextHtml("blogMore")."</a>");
 		} 
 		else {
 		  $output .= $page->getContent();
