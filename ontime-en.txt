@@ -1,7 +1,0 @@
-# Datenstrom Yellow language file
-
-Language: en
-LanguageDescription: English
-LanguageTranslator: Norbert Simon
-
-ontime_NoLocation: File missing - create it? (Check parameters!)
