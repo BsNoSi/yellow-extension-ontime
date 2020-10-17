@@ -1,14 +1,12 @@
 # Yellow Extension OnTime 
 
-> Tested with Yellow 0.815
+Version 1.2.3
 
-### V 1.2.2
+> Tested with core version 0.8.23
 
-OnTime shows external file content for a dedicated time period.
+## Application
 
-## The Idea Behind
-
-There are messages with a defined "life time", for example christmas greetings. With this plugin you can set a start and end date where such messages are shown and hidden again.
+OnTime displays a message on the page for a settable period of time, optionally with a start and/or end date. This can be only an insertion or a teaser with link to a page with the complete content. This is useful for Christmas greetings, for example, or for the opening hours on public holidays or the display of annual holidays.
 
 
 ## Install
@@ -23,69 +21,53 @@ To uninstall simply delete the [extension files](extension.ini).
 
       [ontime file-url end_of_display start_of_display display_mode]
 
-All but the first parameter is optional. Without start and end message will be shown instantly and with no expiration.
+| Parameter | Function |
+| :---:  | :--- |
+| file_url | *required*: Ontime creates by default a folder `/content/ontime` where all files dealed by ontime are expected. Be aware that you have to name the file equally to the title or titleslug. |
+| end_of_display | *optional*: Last *included* date of display ending at midnight, format "YYYY-MM-DD" |
+| start_of_display | *optional*: First *included* date of display starting at 0:00 a.m., format "YYYY-MM-DD" |
+| display_mode | *optional*: Set to `1` the file is not embedded into the page but shown as a teaser (up to `[--more--]`) including title and `read more` link. |
 
-`file_url`: ontime creates by default a folder `/content/ontime` where all files dealed by ontime are expected. Be aware that you have to name the file equally to the title or titleslug.
-
-`end_of_display`: The default is a "hide message" situation, showing it directly after creating. 
-
-`start_of_display`: If a message shall reveal in the future you can set a beginning date.
-
-`display_mode`: Set to `1` the file is not embedded into the page but shown as a teaser (up to `[--more--]`) including title and `read more` link.
-
-You can use only start or end or both together. Format for both is `yyyy-mm-dd`. The beginning or ending date is included which means `start_of_display` starts at midmight of the given date, `end_of_date` hides the message at midnight of given date.
-
+- All but the first parameter is optional.
+- You can use only start or end or both together.
 
 ## Examples
 
-Display external content
+Display external content instantly and eternally:
 
-      [ontime file-url]
+      [ontime file-url]  
+	[ontime /openinghours]
 	
-Display external content up to and including an end date:   
+Display external content from now on up to and including an end date:   
 
-      [ontime file-url end_of_display]
+      [ontime file-url end_of_display] 
+	[ontime /oldlocation 2020-10-17]
 
-Displays external content from a specific date:     
+Displays external content eternally from a future date:     
 
-     [ontime file-url - start_of_display]
+     [ontime file-url - start_of_display] 
+     [onetime /newlocation - 2020-10-18]
 
-Show external content from a start date to an end date:     
+Show external content in a given period:     
 
-     [ontime flie-url end_of_display start_of_display]
+     [ontime flie-url end_of_display start_of_display] 
+     [ontime /holidays 2020-10-30 2020-10-20]
 
-Show teaser from external file with a beginning and ending date:
+Show teaser from external file in a given period:
 
-     [ontime flie-url end_of_display start_of_display 1]
+     [ontime flie-url end_of_display start_of_display 1] 
+     [ontime /holidayreview 2020-11-30 2020-11-01]
 
 
-
-> [ontime] without any parameter shows a bold parameter list in preview. If not bold you should check if imgpop is correctly installed.
-
-#### Hints
+## Hints
 
 - You can create the `ontimer` entry and use the `preview` function of the editor to show the link. If you open this link in another tab of your browser YELLOW offers creation of this file (if logged in).
 - There is *no* default file. If no file is given you will find an huge warning.
 
-## Examples
-
-      [ontime /externals/holidays  2018-09-22  2018-08-30]
-
-Shows *content* of file between 2018-08-30 and 2018-09-22.
-
-      [ontime /externals/holidays  -  2018-08-30]
-
-Shows *content* starting at 2018-08-30.
-
-      [ontime /externals/holidays  -  2018-08-30 1]
-
-Shows *teaser* starting at 2018-08-30.
-
-      [ontime /externals/holidays  2018-08-30 - 1]
-
-Shows *teaser* ending at 2018-08-30.
 
 ## History
+
+2020-10-17: API changes applied.
 
 2020-10-13: Code revised and tested with version 0.8.15 of YELLOW. Improvement of description (this file). Split of language into language files.
 
