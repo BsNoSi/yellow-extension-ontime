@@ -1,0 +1,10 @@
+# ontime extension, https://github.com/BsNoSi/yellow-extension-ontime
+
+Language: de
+ontime_NoLocation: Datei fehlt - erzeugen? (Parameter prüfen!)
+
+Language: en
+ontime_NoLocation: File missing - create it? (Check parameters!)
+
+Language: fr
+ontime_NoLocation: Fichier manquant - le créer ? (Vérifier les paramètres!)
