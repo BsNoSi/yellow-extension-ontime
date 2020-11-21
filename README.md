@@ -1,8 +1,8 @@
 # Yellow Extension OnTime 
 
-Version 1.2.3
+Version 1.2.4
 
-> Tested with core version 0.8.23
+> Tested with Version0.8.33 / Release 0.8.16 of Yellow
 
 ## Application
 
@@ -66,6 +66,8 @@ Show teaser from external file in a given period:
 
 
 ## History
+
+2020-11-21: Alignment to install changes
 
 2020-10-17: API changes applied.
 
