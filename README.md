@@ -1,5 +1,7 @@
 # Yellow Extension OnTime 
 
+**Development discontinued.**
+
 Version 1.2.4
 
 > Tested with Version0.8.33 / Release 0.8.16 of Yellow
